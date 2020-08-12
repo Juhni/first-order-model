@@ -94,7 +94,7 @@ def write(text):
 
 def video_in_cb():
     global video_in_path
-    x = filedialog.askopenfilename(filetypes=(('video files', '*.mp4;*.mkv;*.mov;*.avi'),))
+    x = filedialog.askopenfilename(filetypes=(('video files', '.mp4 .mkv .mov .avi'),))
     if x is not None:
         if len(x) > 0:
             video_in_path = x
@@ -102,7 +102,7 @@ def video_in_cb():
 
 def image_in_cb():
     global image_in_path
-    x = filedialog.askopenfilename(filetypes=(('image files', '*.jpg;*.jpeg;*.png'),))
+    x = filedialog.askopenfilename(filetypes=(('image files', '.jpg .jpeg .png'),))
     if x is not None:
         if len(x) > 0:
             image_in_path = x
@@ -110,7 +110,7 @@ def image_in_cb():
 
 def video_out_cb():
     global video_out_path
-    x = filedialog.asksaveasfilename(filetypes=(('.mp4 files', '*.mp4'),))
+    x = filedialog.asksaveasfilename(filetypes=(('.mp4 files', '.mp4'),))
     if x is not None:
         if len(x) > 0:
             if not x.endswith('.mp4'):
